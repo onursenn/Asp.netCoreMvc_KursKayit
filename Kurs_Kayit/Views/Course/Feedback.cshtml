@@ -1,0 +1,14 @@
+@model Candidate
+
+<div align="center">
+<p ><strong>Hoşgeldin @Model.FullName @Model.SelectedCourse Kursumuza Yaptığın Başvurun @Model.ApplyAt Tarihinde Başarılı
+        Bir
+        Şekilde <mark>Değerlendirilmeye</mark> Alınmıştır </strong></p>
+
+<div class="btn-group">
+
+    <a class="btn btn-outline-success" asp-controller="Home" asp-action="Index">Anasayfa</a>
+    <a class="btn btn-outline-success" asp-action="Index">Başvuru Yapanlar</a>
+
+</div>
+</div>

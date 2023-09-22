@@ -1,0 +1,47 @@
+@model IEnumerable<Candidate>
+
+@if (Model.Count() > 0)
+{
+
+    <h2 align="center">Başvuranlar Listesi </h2>
+    <strong>Toplam Başvuru(@Model.Count())</strong>
+    
+    <table class="table table-hover table">
+        <thead>
+            <tr>
+                <th >E-mail</th>
+                <th>Ad Soyad</th>
+                <th>Başvuru Tarihi</th>
+                <th>Başvurduğu Kurs</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+<tr>
+<td>@item.Email</td>
+<td>@item.FullName</td>
+<td>@item.ApplyAt</td>
+<td>@item.SelectedCourse</td>
+</tr>
+
+            }
+
+
+        </tbody>
+
+
+
+    </table>
+
+}
+else
+{
+
+    <div align="center" class="alert alart-info">
+
+        Henüz Başvuru Bulunmamaktadır. Başvuru için <a class="alert-link" asp-action="Apply">Tıklayın</a>
+
+    </div>
+}
